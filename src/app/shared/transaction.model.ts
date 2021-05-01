@@ -18,7 +18,7 @@ interface TransactionData {
 
 export class Transaction {
 
-    date: Date;
+    date: string;
     flag: string;
     payee: string;
     narration: string;
@@ -29,7 +29,7 @@ export class Transaction {
     }[];
 
     constructor(data: TransactionData) {
-        this.date = new Date(data.date)
+        this.date = data.date
         this.flag = data.flag || 'txn'
         this.payee = data.payee
         this.narration = data.narration
@@ -49,7 +49,7 @@ export class Transaction {
     }
 
     toBeancount(): string {
-        const dateStr = getDateStr(this.date)
+        const dateStr = this.date
         let result = `${dateStr} ${this.flag}`
         if (this.payee) {
             result += ` "${this.payee}"`
