@@ -16,7 +16,7 @@
         "@angular/router": "~10.2.3",
         "@nativescript/angular": "~10.1.7",
         "@nativescript/core": "~7.0.0",
-        "@nativescript/imagepicker": "~1.0.0",
+        "@nativescript/imagepicker": "~1.0.7",
         "@nativescript/schematics": "^10.0.0",
         "@nativescript/unit-test-runner": "~1.0.2",
         "@nativescript/webpack": "~3.0.8",
